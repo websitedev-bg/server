@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <style>
+      body {
+        background-color: #efefef;
+        max-width: 768px;
+        margin: 0 auto;
+        font-family: Geneva, Tahoma, sans-serif;
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      .container {
+        text-align: center;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        background-color: #ffffff;
+        text-align: justify;
+      }
+      .delivery-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      table {
+        width: 100%;
+        padding: 5px;
+      }
+      table,
+      table thead tr th,
+      table tbody tr td {
+        border: 1px solid #efefef;
+        padding: 5px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>{{title}}</h1>
+      <p>Здравейте, <strong>{{fullname}}</strong>!</p>
+      <p>
+        <span>Поръчката Ви се обработва. Благодарим, че избрахте</span>
+        <a href="{{website_link}}">{{website_title}}</a>
+      </p>
+      <p>
+        Работното време за обработка на поръчки е между 9:30 и 18:30 часа по
+        време на работните дни. Поръчките, направени извън този период, ще бъдат
+        обработени от началото на следващия работен ден.
+      </p>
+      <h2>Информация за доставката</h2>
+      <ul class="delivery-info">
+        <li>
+          <strong>Име и фамилия</strong>
+          <div>{{fullname}}</div>
+        </li>
+        <li>
+          <strong>Телефонен номер</strong>
+          <div>{{phone_number}}</div>
+        </li>
+        <li>
+            <strong>Град за доставка</strong>
+            <div>{{city}}</div>
+        </li>
+        <li>
+            <strong>Адрес за доставка</strong>
+            <div>{{address}}</div>
+        </li>
+        <li>
+          <strong>Начин на плащане</strong>
+          <div>{{payment_method}}</div>
+        </li>
+        <li>
+          <strong>Дата на поръчка</strong>
+          <div>{{order_date}}</div>
+        </li>
+      </ul>
+      <h2>Избрани продукти</h2>
+      {{table}}
+      <p>
+        Благодарим ви за доверието! Ако имате въпроси или нужда от помощ, не се
+        колебайте да се свържете с нас.
+      </p>
+      <p>Поздрави, Екипът на <strong>{{website_title}}</strong></p>
+    </div>
+  </body>
+</html>

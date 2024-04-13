@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <style>
+      body {
+        background-color: #efefef;
+        max-width: 600px;
+        margin: 0 auto;
+        font-family: Geneva, Tahoma, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        line-height: 1.5;
+        font-size: 18px;
+      }
+      .container {
+        text-align: center;
+        padding: 20px 40px 40px;
+        border-radius: 5px;
+        background-color: #ffffff;
+        text-align: justify;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Успешна регистрация!</h1>
+      <p>
+        Здравейте, <strong>{{username}}</strong>!
+      </p>
+      <p>
+        Благодарим ви, че се регистрирахте в нашия уебсайт. За да завършите
+        процеса на регистрация, моля, потвърдете своя имейл, като въведете
+        посочения по-долу код в системата:
+      </p>
+      <p>
+        <a href="{{confirmation_link}}">Натиснете тук!</a>
+      </p>
+      <p>
+        Благодарим ви за доверието! Ако имате въпроси или нужда от помощ, не се
+        колебайте да се свържете с нас.
+      </p>
+      <p>Поздрави, Екипът на <strong>{{website_title}}</strong></p>
+    </div>
+  </body>
+</html>
