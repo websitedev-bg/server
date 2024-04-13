@@ -14,6 +14,7 @@ require "languages/" . $language . ".php";
 
 require "constants.php";
 require "common/functions.php";
+require "common/cors.php";
 require "config.php";
 
 require "routers/index.php";
