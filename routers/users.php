@@ -1,6 +1,7 @@
 <?php
 
 $router->get("/users", "users/get/user");
+$router->get("/users/index", "users/get/index");
 
 $router->post("/users/register", "users/register");
 $router->post("/users/login", "users/login");

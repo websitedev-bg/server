@@ -62,6 +62,27 @@ class User {
         }
     }
 
+    public static function getItems($limit, $offset, $column) {
+        global $database;
+
+        $sql = "SELECT $column FROM users";
+        $params = [];
+
+        if ($limit) {
+            $sql .= " LIMIT $limit";
+        }
+
+        if ($offset) {
+            $sql .= " OFFSET $offset";
+        }
+
+        try {
+            return $database->select($sql, $params);
+        } catch(Exception $ex) {
+            throw new Error("Fetch all users error: " . $ex->getMessage());
+        }
+    }
+
     public static function changePassword($password, $newPassword) {
         global $database;
 
