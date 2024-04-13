@@ -1,6 +1,6 @@
 <?php
 
-$router->get("/users/logged-in", "users/logged-in");
+$router->get("/users", "users/get/user");
 
 $router->post("/users/register", "users/register");
 $router->post("/users/login", "users/login");
